@@ -1,0 +1,12 @@
+# Core data science libraries
+pandas
+numpy
+scikit-learn
+
+# Visualization
+matplotlib
+seaborn
+squarify
+
+# Specific algorithms
+mlxtend  # For Apriori algorithm (Market Basket Analysis)
