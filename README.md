@@ -53,6 +53,11 @@ python main.py
 - **Dependencias**: pandas, matplotlib, seaborn, mlxtend
 
 ### RFM Analysis
+
+<p align="center">
+  <img src="algoritmo_rfm/output/AlgoOnlineRetailDataset_02_segments.png" width="90%" />
+</p>
+
 - **Ubicación**: `algoritmo_rfm/`
 - **Descripción**: Análisis de recencia, frecuencia y valor monetario
 - **Dependencias**: pandas, matplotlib, seaborn
