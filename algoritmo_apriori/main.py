@@ -1,5 +1,8 @@
 from abc import abstractmethod
 from pathlib import Path
+import os
+from dotenv import load_dotenv
+
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -10,6 +13,9 @@ from mlxtend.frequent_patterns import apriori
 # from mlxtend.frequent_patterns import association_rules
 from mlxtend.preprocessing import TransactionEncoder
 
+# Cargar variables de entorno desde .env
+load_dotenv()
+
 
 class Algo:
     def __init__(self):
@@ -19,9 +25,10 @@ class Algo:
 
         # Crear directorio de salida si no existe
         self.output_dir.mkdir(exist_ok=True)
-        # Borrar contedio del directorio de salida
-        for file in self.output_dir.glob("*"):
-            file.unlink()
+
+        # # Borrar contedio del directorio de salida
+        # for file in self.output_dir.glob("*"):
+        #     file.unlink()
 
         self.df = self.load_dataset()
 
@@ -41,12 +48,14 @@ class Algo:
 
         self.df.value_counts("producto")
 
-        self.plot_distribution(self.df, "01_distribucion_productos.png")
+        cn = self.__class__.__name__
+
+        self.plot_distribution(self.df, f"{cn}_01_distribucion_productos.png")
 
         tpdata, filtered_freq_rules = self.apriori_analysis(self.df)
-        self.plot_patterns(tpdata, "02_patron_transacciones.png")
+        self.plot_patterns(tpdata, f"{cn}_02_patron_transacciones.png")
         self.plot_frequent_itemsets(
-            filtered_freq_rules, "03_frequent_itemsets.png"
+            filtered_freq_rules, f"{cn}_03_frequent_itemsets.png"
         )
 
     def apriori_analysis(
@@ -275,10 +284,14 @@ class AlgoOnlineRetailDataset(Algo):
         super().__init__()
 
     def load_dataset(self):
-        kaggle_dir = Path("/home/toopazo/Dropbox/tomas/trabajo_duoc/AAA_datos")
-        csv_path = kaggle_dir / Path(
-            "kaggle/Online Retail Dataset/online_retail.csv"
-        )
+        csv_path_str = os.getenv("ONLINE_RETAIL_CSV")
+        if csv_path_str is None:
+            raise ValueError(
+                "Variable de entorno ONLINE_RETAIL_CSV no encontrada. "
+                "Crea un archivo .env con la ruta al dataset."
+            )
+
+        csv_path = Path(csv_path_str)
         assert csv_path.exists(), f"Archivo no encontrado: {csv_path}"
 
         df = pd.read_csv(csv_path)
@@ -301,11 +314,9 @@ class AlgoMarketBasketDataset(Algo):
         super().__init__()
 
     def load_dataset(self):
-        repo_dir = Path(
-            "/home/toopazo/Dropbox/tomas/repos_git/biy7121_mindatos"
-        )
-        csv_path = repo_dir / Path(
-            "algoritmo_apriori/input/2.1.3 Market_Basket_Optimisation.csv"
+
+        csv_path = Path(__file__).parent / Path(
+            "input/2.1.3 Market_Basket_Optimisation.csv"
         )
         assert csv_path.exists(), f"Archivo no encontrado: {csv_path}"
 
@@ -329,8 +340,8 @@ class AlgoMarketBasketDataset(Algo):
 
 
 if __name__ == "__main__":
-    # algo1 = AlgoMarketBasketDataset()
-    # algo1.run()
+    algo1 = AlgoMarketBasketDataset()
+    algo1.run()
 
     algo2 = AlgoOnlineRetailDataset()
     algo2.run()

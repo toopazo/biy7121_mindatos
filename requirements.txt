@@ -10,3 +10,6 @@ squarify
 
 # Specific algorithms
 mlxtend  # For Apriori algorithm (Market Basket Analysis)
+
+# Configuration
+python-dotenv  # For loading environment variables from .env

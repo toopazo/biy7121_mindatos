@@ -41,6 +41,13 @@ python main.py
 ## Algoritmos Incluidos
 
 ### Apriori (Market Basket Analysis)
+
+<p align="center">
+  <img src="algoritmo_apriori/output/AlgoMarketBasketDataset_01_distribucion_productos.png" width="30%" />
+  <img src="algoritmo_apriori/output/AlgoMarketBasketDataset_02_patron_transacciones.png" width="30%" />
+  <img src="algoritmo_apriori/output/AlgoMarketBasketDataset_03_frequent_itemsets.png" width="30%" />
+</p>
+
 - **Ubicación**: `algoritmo_apriori/`
 - **Descripción**: Análisis de asociación para descubrir patrones de compra
 - **Dependencias**: pandas, matplotlib, seaborn, mlxtend
