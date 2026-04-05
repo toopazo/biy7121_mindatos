@@ -52,7 +52,7 @@ python main.py
 - **Descripción**: Análisis de asociación para descubrir patrones de compra
 - **Dependencias**: pandas, matplotlib, seaborn, mlxtend
 
-### RFM Analysis
+### RFM (Market Segmentation)
 
 <p align="center">
   <img src="algoritmo_rfm/output/AlgoOnlineRetailDataset_02_segments.png" width="90%" />
@@ -62,6 +62,23 @@ python main.py
 - **Descripción**: Análisis de recencia, frecuencia y valor monetario
 - **Dependencias**: pandas, matplotlib, seaborn
 
+## Uso de `.env`
+
+Algunos scripts leen rutas o configuraciones locales desde un archivo `.env` en la raíz del proyecto. Ese archivo **no se sube a GitHub** y debes crearlo tu mismo. La idea es detallar la ruta de los dataset.
+
+Ejemplo:
+
+```env
+ONLINE_RETAIL_CSV=/ruta/al/dataset/online_retail.csv
+```
+
+Luego ejecuta normalmente:
+
+```bash
+source .venv/bin/activate
+python algoritmo_rfm/main.py
+```
+
 ## Requisitos
 
 - Python 3.8+
@@ -69,6 +86,5 @@ python main.py
 
 ## Notas
 
-- Cada carpeta de algoritmo puede tener su propio `requirements.txt` como documentación de dependencias específicas
 - El entorno virtual `.venv/` está en `.gitignore` y no se versiona
 - Todos los algoritmos comparten el mismo entorno virtual para eficiencia
