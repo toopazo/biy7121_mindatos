@@ -1,8 +1,8 @@
-# Ejemplos de Algoritmos de Data Mining
+# Ejemplos de algoritmos de Data Mining
 
 Este repositorio contiene ejemplos prácticos de algoritmos de data mining implementados en Python.
 
-## Estructura del Proyecto
+## Estructura del proyecto
 
 ```
 .
@@ -11,7 +11,7 @@ Este repositorio contiene ejemplos prácticos de algoritmos de data mining imple
 └── ...                      # Otros algoritmos
 ```
 
-## Configuración del Entorno
+## Configuración del entorno
 
 ### 1. Crear y activar el entorno virtual
 
@@ -38,7 +38,7 @@ cd algoritmo_apriori
 python main.py
 ```
 
-## Algoritmos Incluidos
+## Algoritmos incluidos
 
 ### Apriori (Market Basket Analysis)
 
@@ -54,7 +54,7 @@ python main.py
 
 ### RFM Analysis
 - **Ubicación**: `algoritmo_rfm/`
-- **Descripción**: Análisis de Recencia, Frecuencia y Valor Monetario
+- **Descripción**: Análisis de recencia, frecuencia y valor monetario
 - **Dependencias**: pandas, matplotlib, seaborn
 
 ## Requisitos
