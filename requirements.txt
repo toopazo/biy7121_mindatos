@@ -1,12 +1,14 @@
 # Core data science libraries
 pandas
+pandas-stubs
 numpy
 scikit-learn
 
 # Visualization
 matplotlib
 seaborn
-squarify
+plotly  # For interactive 3D visualizations
+types-seaborn
 
 # Specific algorithms
 mlxtend  # For Apriori algorithm (Market Basket Analysis)

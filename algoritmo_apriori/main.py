@@ -1,3 +1,7 @@
+"""
+Ejemplos de uso del algoritmo Apriori
+"""
+
 from abc import abstractmethod
 from pathlib import Path
 import os
@@ -18,6 +22,8 @@ load_dotenv()
 
 
 class Algo:
+    """Clase base para algoritmos de análisis de transacciones"""
+
     def __init__(self):
         self.base_dir = Path(__file__).parent
         # self.input_dir = self.base_dir / "input"
@@ -280,8 +286,7 @@ class Algo:
 
 
 class AlgoOnlineRetailDataset(Algo):
-    def __init__(self):
-        super().__init__()
+    """Algoritmo para analizar el dataset Online Retail"""
 
     def load_dataset(self):
         csv_path_str = os.getenv("ONLINE_RETAIL_CSV")
@@ -310,8 +315,7 @@ class AlgoOnlineRetailDataset(Algo):
 
 
 class AlgoMarketBasketDataset(Algo):
-    def __init__(self):
-        super().__init__()
+    """Algoritmo para analizar el dataset Market Basket"""
 
     def load_dataset(self):
 
