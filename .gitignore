@@ -4,10 +4,6 @@ venv/
 ENV/
 env/
 
-# Environment variables
-.env
-.env.local
-
 # Python
 __pycache__/
 *.py[cod]
@@ -38,3 +34,29 @@ Thumbs.db
 dist/
 build/
 *.egg-info/
+
+# Datasets (no versionar binarios grandes)
+data/
+
+# Variables de entorno locales (rutas, credenciales)
+.env
+.env.*
+
+# Embeddings generados (archivos binarios pesados)
+*.npy
+*.npy.gz
+**/embeddings/
+
+# Imágenes y outputs generados por notebooks
+**/output/
+*.png
+*.jpg
+*.jpeg
+
+# Modelos entrenados
+*.pt
+*.pth
+*.onnx
+
+# Kaggle
+kaggle.json

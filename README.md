@@ -1,8 +1,8 @@
-# Ejemplos de algoritmos de Data Mining
+# Ejemplos de Algoritmos de Data Mining
 
 Este repositorio contiene ejemplos prácticos de algoritmos de data mining implementados en Python.
 
-## Estructura del proyecto
+## Estructura del Proyecto
 
 ```
 .
@@ -11,7 +11,7 @@ Este repositorio contiene ejemplos prácticos de algoritmos de data mining imple
 └── ...                      # Otros algoritmos
 ```
 
-## Configuración del entorno
+## Configuración del Entorno
 
 ### 1. Crear y activar el entorno virtual
 
@@ -38,46 +38,17 @@ cd algoritmo_apriori
 python main.py
 ```
 
-## Algoritmos incluidos
+## Algoritmos Incluidos
 
 ### Apriori (Market Basket Analysis)
-
-<p align="center">
-  <img src="algoritmo_apriori/output/AlgoMarketBasketDataset_01_distribucion_productos.png" width="30%" />
-  <img src="algoritmo_apriori/output/AlgoMarketBasketDataset_02_patron_transacciones.png" width="30%" />
-  <img src="algoritmo_apriori/output/AlgoMarketBasketDataset_03_frequent_itemsets.png" width="30%" />
-</p>
-
 - **Ubicación**: `algoritmo_apriori/`
 - **Descripción**: Análisis de asociación para descubrir patrones de compra
 - **Dependencias**: pandas, matplotlib, seaborn, mlxtend
 
-### RFM (Market Segmentation)
-
-<p align="center">
-  <img src="algoritmo_rfm/output/AlgoOnlineRetailDataset_02_segments.png" width="90%" />
-</p>
-
+### RFM Analysis
 - **Ubicación**: `algoritmo_rfm/`
-- **Descripción**: Análisis de recencia, frecuencia y valor monetario
+- **Descripción**: Análisis de Recencia, Frecuencia y Valor Monetario
 - **Dependencias**: pandas, matplotlib, seaborn
-
-## Uso de `.env`
-
-Algunos scripts leen rutas o configuraciones locales desde un archivo `.env` en la raíz del proyecto. Ese archivo **no se sube a GitHub** y debes crearlo tu mismo. La idea es detallar la ruta de los dataset.
-
-Ejemplo:
-
-```env
-ONLINE_RETAIL_CSV=/ruta/al/dataset/online_retail.csv
-```
-
-Luego ejecuta normalmente:
-
-```bash
-source .venv/bin/activate
-python algoritmo_rfm/main.py
-```
 
 ## Requisitos
 
@@ -86,5 +57,6 @@ python algoritmo_rfm/main.py
 
 ## Notas
 
+- Cada carpeta de algoritmo puede tener su propio `requirements.txt` como documentación de dependencias específicas
 - El entorno virtual `.venv/` está en `.gitignore` y no se versiona
 - Todos los algoritmos comparten el mismo entorno virtual para eficiencia

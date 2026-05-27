@@ -1,17 +1,12 @@
 # Core data science libraries
 pandas
-pandas-stubs
 numpy
 scikit-learn
 
 # Visualization
 matplotlib
 seaborn
-plotly  # For interactive 3D visualizations
-types-seaborn
+squarify
 
 # Specific algorithms
 mlxtend  # For Apriori algorithm (Market Basket Analysis)
-
-# Configuration
-python-dotenv  # For loading environment variables from .env

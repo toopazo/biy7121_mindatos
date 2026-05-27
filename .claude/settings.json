@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p /home/toopazo/Dropbox/tomas/repos_git/biy7121_mindatos/.claude)",
+      "Bash(python3 -c \"import json; nb = json.load\\(open\\('/home/toopazo/Dropbox/tomas/repos_git/biy7121_mindatos/algoritmo_kmeans/2_7_5_Embeddings_y_K_Means.ipynb'\\)\\); print\\(f'Celdas: {len\\(nb[\\\\\"cells\\\\\"]\\)}'\\); [print\\(f'  [{i:02d}] {c[\\\\\"cell_type\\\\\"]:8s}  {str\\(c[\\\\\"source\\\\\"]\\)[:70]}'\\) for i, c in enumerate\\(nb['cells']\\)]\")",
+      "Bash(python3 -c \"import jupyter\")",
+      "Bash(/home/toopazo/Dropbox/tomas/repos_git/biy7121_mindatos/.venv/bin/pip list *)",
+      "Bash(/home/toopazo/Dropbox/tomas/repos_git/biy7121_mindatos/.venv/bin/pip install *)",
+      "Bash(/home/toopazo/Dropbox/tomas/repos_git/biy7121_mindatos/.venv/bin/python3 --version)",
+      "Bash(/home/toopazo/Dropbox/tomas/repos_git/biy7121_mindatos/.venv/bin/pip --version)",
+      "Bash(/home/toopazo/Dropbox/tomas/repos_git/biy7121_mindatos/.venv/bin/pip show *)",
+      "Bash(.venv/bin/jupyter nbconvert *)",
+      "Bash(python3 -m nbconvert --version)",
+      "Bash(pip3 show *)",
+      "Bash(.venv/bin/jupyter-nbconvert --to notebook --execute --inplace --ExecutePreprocessor.timeout=1200 --ExecutePreprocessor.kernel_name=python3 algoritmo_kmeans/2_7_5_Embeddings_y_K_Means.ipynb)",
+      "Bash(python3 -c ' *)"
+    ],
+    "additionalDirectories": [
+      "/home/toopazo/Dropbox/tomas/repos_git/biy7121_mindatos"
+    ]
+  }
+}
