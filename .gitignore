@@ -47,11 +47,8 @@ data/
 *.npy.gz
 **/embeddings/
 
-# Imágenes y outputs generados por notebooks
+# Outputs generados por notebooks (imágenes, HTML, etc.)
 **/output/
-*.png
-*.jpg
-*.jpeg
 
 # Modelos entrenados
 *.pt
